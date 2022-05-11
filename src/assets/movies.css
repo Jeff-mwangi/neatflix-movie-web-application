@@ -1,0 +1,46 @@
+.grid-x {
+  border-radius: 5px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 14%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  gap: 1rem;
+
+}
+.scroll-inline{
+  scroll-snap-type: inline mandatory;
+  overflow: hidden;
+}
+.scroll-inline > * {
+  scroll-snap-align: start;
+}
+
+.panel-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.g-card img {
+  border-radius: 6px;
+  height: auto;
+  width: 100%;
+  cursor: pointer;
+  object-fit: cover;
+}
+.g-card img:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.release-date {
+  padding-top: 10px;
+  font-size: 0.8em;
+  color: #999;
+}
+@media (max-width: 768px) {
+  .grid-x {
+    grid-auto-columns: 6rem;
+    grid-template-columns: repeat(auto-fill, minmax(7rem));
+  }
+}
