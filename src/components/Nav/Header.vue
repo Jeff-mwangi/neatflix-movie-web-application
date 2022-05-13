@@ -21,8 +21,11 @@ export default {
 </script>
 
 <style scoped>
+img {
+  background:linear-gradient(to right, #00f13cec,rgb(rgb(230, 4, 4)));
+}
 .header-content button{
-  background: rgb(255, 255, 255);
+  background:linear-gradient(to right, #00f13cec,rgb(rgb(230, 4, 4)));
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
   padding: 10px;
