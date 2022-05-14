@@ -44,7 +44,10 @@ export default {
 
 <style scoped>
 nav {
-  background-color: rgb(63, 4, 110)
+  height: 0%;
+  background-color: rgb(63, 4, 110);
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 .sidenav{
   height: 2.5rem;
@@ -140,7 +143,7 @@ input:focus {
 .menu {
   display: block;
   font-size: 2rem;
-  color: #818181;
+  color: #9b9b9b;
   cursor: pointer;
 }
 .sidenav input{

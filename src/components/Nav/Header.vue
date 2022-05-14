@@ -73,7 +73,7 @@ header{
 
 @media screen and (max-width: 768px) {
   header{
-    height:50vh;
+    height:60vh;
     width: 100%;
   }
   .header-content h1{
