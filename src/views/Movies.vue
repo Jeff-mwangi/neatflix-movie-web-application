@@ -1,6 +1,6 @@
 <template>
+<Header />
 <div class="container-fluid">
-  <Header />
   <Popular />
   <TopRated />
   <TvShows />

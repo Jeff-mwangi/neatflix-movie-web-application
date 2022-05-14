@@ -17,7 +17,7 @@
   <a href="#">Movies</a>
   <a href="#">Series</a>
   <a href="#">Contact</a>
-  <input type="search" name="search" id="search" placeholder="Search">
+  <input type="search" name="search" id="search" placeholder="Search Movies">
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776</span>
@@ -47,8 +47,8 @@ nav {
   background-color: rgb(63, 4, 110)
 }
 .sidenav{
-  height: 2rem;
-  display: inline-block;
+  height: 2.5rem;
+  display: flex;
   width:auto;
 }
 .sidenav a{
@@ -58,7 +58,7 @@ nav {
   overflow-x: hidden;
   transition: 0.5s;
   font-weight: bold;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 3rem 1rem;
   text-decoration: none;
   font-size: 1.5rem;
   color: #ffffff;
@@ -83,14 +83,27 @@ nav {
   margin-left: 50px;
 }
 .sidenav input{
-  background:#3b3b3b;
+  background:linear-gradient(to right,rgb(145, 66, 66) 48%,rgb(93, 93, 160));
   border-radius: 10px;
   text-align: center;
-  height: 35px;
+  height: 38px;
   border:none;
   right: 0;
   padding-right:0;
   margin-left:5rem;
+ 
+}
+.sidenav input:active {
+  color: #ebebeb;
+  transition: color 0.5s linear 0s;
+}
+input:hover,
+input:focus {
+  background:linear-gradient(to right,rgb(145, 66, 66) 48%,rgb(93, 93, 160));
+  transition: active;
+}
+::placeholder{
+ color:#ffffff;
 }
 
 @media screen and (max-height: 770px) {
@@ -132,7 +145,7 @@ nav {
 }
 .sidenav input{
   width:10rem;
-  margin:0;
+  margin-left:40px;
   }
 }
 </style>
