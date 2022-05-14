@@ -22,10 +22,7 @@
 </div>
 <span class="menu" @click="openNav()">&#9776</span>
 </div>
-
 </nav>
-
-
 </template>
 
 <script>
@@ -47,11 +44,9 @@ nav {
   height: 0%;
   background-color: rgb(63, 4, 110);
   padding-top: 4px;
-  padding-bottom: 4px;
 }
 .sidenav{
-  height: 2.5rem;
-  display: flex;
+  height: auto;
   width:auto;
 }
 .sidenav a{
@@ -90,20 +85,22 @@ nav {
   border-radius: 10px;
   text-align: center;
   height: 38px;
-  border:none;
   right: 0;
   padding-right:0;
   margin-left:5rem;
  
 }
 .sidenav input:active {
+  border:none;
   color: #ebebeb;
   transition: color 0.5s linear 0s;
 }
 input:hover,
 input:focus {
+  outline: none;
   background:linear-gradient(to right,rgb(145, 66, 66) 48%,rgb(93, 93, 160));
   transition: active;
+  box-shadow: 0px 0px 10px rgb(247, 247, 247);
 }
 ::placeholder{
  color:#ffffff;

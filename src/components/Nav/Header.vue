@@ -1,10 +1,10 @@
 <template>
-    <header>
+    <header class="hero-image">
       <div class="header-content">
-        <h1>BLACK PANTHER</h1>
-        <p>
+        <!-- <h1>BLACK PANTHER</h1> -->
+        <!-- <p>
          Laura and Massimo are back and hotter than ever. But the reunited couple's new beginning is complicated by Massimo’s family ties and a mysterious man who enters Laura’s life to win her heart and trust, at any cost.
-        </p>
+        </p> -->
         <button>Watch Now</button>
       </div>
     </header>
@@ -13,13 +13,42 @@
 <script>
 export default {
   name: "Header",
+  methods:{
+    heroImages(){
+    // add images in an array and loop through them to display them in the header image section
+    let images = [
+      "https://cdn.wallpapersafari.com/76/85/fFsbXB.jpg",
+      "https://www.teahub.io/photos/full/67-670663_hollywood-movie-poster-hd.jpg",
+      "https://wallpapercave.com/wp/jCDL6OV.jpg",
+      "https://www.mmppicture.co.in/wp-content/uploads/2022/03/The-Kashmir-Files-Poster-1-1080x608.jpg",
+      "https://wallpaperbat.com/img/227405-avengers-endgame-2019-poster-wallpaper-avengers-movie-posters.jpg",
+      "https://filmspell.com/wp-content/uploads/2019/10/Joker2019-Movie-HD-Poster-FilmSpell_1-990x556.jpg",
+      "https://www.michigansportszone.com/wp-content/uploads/2021/08/83422625.jpg",
+      "https://wallpapercave.com/uwp/uwp170129.png",
+      "https://www.renderhub.com/renderhub/black-panther-movie-poster-3d-wallpaper/black-panther-movie-poster-3d-wallpaper_2560x1024.jpg",
+    ];
+    let i = 0;
+    let hero = document.querySelector(".hero-image");
+    let heroImages = setInterval(() => {
+      hero.style.backgroundImage =  `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(${images[i]})`;
+      hero.style.transition = "1s ease";
+      i++;
+      if (i >= images.length) {
+        i = 0;
+      }
+    }, 6000);
+    },
+  },
+  mounted(){
+    this.heroImages();
+  },
 };
 </script>
 
 <style scoped>
 
 header{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(https://images.indianexpress.com/2021/07/black-panther-wakanda-forever-1200.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://www.renderhub.com/renderhub/black-panther-movie-poster-3d-wallpaper/black-panther-movie-poster-3d-wallpaper_2560x1024.jpg");
   background-size:cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -33,12 +62,12 @@ header{
 
 }
 .header-content button{
-  background:linear-gradient(to right, #00f13cec,rgb(rgb(230, 4, 4)));
-  border: 1px solid rgb(255, 255, 255);
+  background-color: #f52e2e;
+  border:none;
   border-radius: 5px;
   padding: 10px;
   position: absolute;
-  color: rgb(77, 9, 133);
+  color: rgb(255, 255, 255);
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
