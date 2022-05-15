@@ -1,8 +1,7 @@
 <template>
   <header class="hero-image">
     <div class="header-content">
-      <!-- Implementing previous and next arrows based on the current image -->
-
+     <!-- Implement previous and next arrows to display images -->
       <a href="#" class="previous">&laquo;</a>
       <a href="#" class="next">&raquo;</a>
       <!-- <h1>BLACK PANTHER</h1> -->
@@ -31,6 +30,8 @@ export default {
         "https://wallpapercave.com/uwp/uwp170129.png",
         "https://www.renderhub.com/renderhub/black-panther-movie-poster-3d-wallpaper/black-panther-movie-poster-3d-wallpaper_2560x1024.jpg",
       ];
+      let previous = document.querySelector(".previous");
+      let next = document.querySelector(".next");
       let i = 0;
       let hero = document.querySelector(".hero-image");
       let heroImages = setInterval(() => {
@@ -40,9 +41,23 @@ export default {
           i = 0;
         }
       }, 6000);
-    },
+      previous.addEventListener("click", () => {
+      i--;
+      if (i < 0) {
+        i = images.length - 1;
+      }
+      hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(${images[i]})`;
+    });
+    next.addEventListener("click", () => {
+      i++;
+      if (i >= images.length) {
+        i = 0;
+      }
+      hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(${images[i]})`;
+    });
   },
-  mounted() {
+    },
+     mounted() {
     this.heroImages();
   },
 };
