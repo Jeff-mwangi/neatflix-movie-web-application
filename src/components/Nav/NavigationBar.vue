@@ -84,11 +84,11 @@ nav {
   background:linear-gradient(to right,rgb(145, 66, 66) 48%,rgb(93, 93, 160));
   border-radius: 10px;
   text-align: center;
+  border:none;
   height: 38px;
   right: 0;
   padding-right:0;
   margin-left:5rem;
- 
 }
 .sidenav input:active {
   border:none;
