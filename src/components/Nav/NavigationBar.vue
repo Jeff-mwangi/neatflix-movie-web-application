@@ -20,7 +20,7 @@
   <input type="search" name="search" id="search" placeholder="Search Movies">
   </div>
 </div>
-<span class="menu" @click="openNav()">&#9776</span>
+<span class="menu" @click="openNav()">&#9776;</span>
 </div>
 </nav>
 </template>
@@ -42,12 +42,13 @@ export default {
 <style scoped>
 nav {
   height: 0%;
-  background-color: rgb(63, 4, 110);
+  background-color: rgb(32, 5, 54);
   padding-top: 4px;
 }
 .sidenav{
   height: auto;
   width:auto;
+  margin-left:0px;
 }
 .sidenav a{
   position: inherit;
@@ -81,7 +82,7 @@ nav {
   margin-left: 50px;
 }
 .sidenav input{
-  background:linear-gradient(to right,rgb(145, 66, 66) 48%,rgb(93, 93, 160));
+  background-color:#ebebeb;
   border-radius: 10px;
   text-align: center;
   border:none;
@@ -98,12 +99,12 @@ nav {
 input:hover,
 input:focus {
   outline: none;
-  background:linear-gradient(to right,rgb(145, 66, 66) 48%,rgb(93, 93, 160));
+  background-color:#ebebeb;
   transition: active;
   box-shadow: 0px 0px 10px rgb(247, 247, 247);
 }
 ::placeholder{
- color:#ffffff;
+ color:#000000;
 }
 
 @media screen and (max-height: 770px) {
@@ -116,7 +117,7 @@ input:focus {
 }
 @media screen and (max-width: 977px) {
 .sidenav {
-  background-color: rgb(48, 16, 73);
+  background-color: rgb(19, 3, 32);
   height: 100%;
   width: 0%;
   position: fixed;

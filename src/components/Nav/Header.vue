@@ -8,7 +8,7 @@
       <!-- <p>
          Laura and Massimo are back and hotter than ever. But the reunited couple's new beginning is complicated by Massimo’s family ties and a mysterious man who enters Laura’s life to win her heart and trust, at any cost.
         </p> -->
-      <button>Watch Now</button>
+      <button>Play</button>
     </div>
   </header>
 </template>
@@ -20,6 +20,7 @@ export default {
     heroImages() {
       // add images in an array and loop through them to display them in the header image section
       let images = [
+        "https://netflixjunkie.com/wp-content/uploads/2022/04/AAAABXq_vQJf0hxGmUQqHnb8nXwpz8iEmzC2upISv1MYxfE2kXO-IouDyL-TuAAkSqEn-iPui5s3ax8In2XqquIQkQ7L7csL.jpg",
         "https://cdn.wallpapersafari.com/76/85/fFsbXB.jpg",
         "https://www.teahub.io/photos/full/67-670663_hollywood-movie-poster-hd.jpg",
         "https://wallpapercave.com/wp/jCDL6OV.jpg",
@@ -46,14 +47,14 @@ export default {
       if (i < 0) {
         i = images.length - 1;
       }
-      hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(${images[i]})`;
+      hero.style.backgroundImage = `linear-gradient(to right,rgba(0, 0, 0, 0.2)),url(${images[i]})`;
     });
     next.addEventListener("click", () => {
       i++;
       if (i >= images.length) {
         i = 0;
       }
-      hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(${images[i]})`;
+      hero.style.backgroundImage = `linear-gradient(to right,rgba(0, 0, 0, 0.7)),url(${images[i]})`;
     });
   },
     },
@@ -65,7 +66,7 @@ export default {
 
 <style scoped>
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(to right,rgba(0, 0, 0, 0.2)),
     url("https://www.renderhub.com/renderhub/black-panther-movie-poster-3d-wallpaper/black-panther-movie-poster-3d-wallpaper_2560x1024.jpg");
   background-size: 100% 100%;
   background-position: center center;
@@ -80,11 +81,11 @@ header {
 .header-content a{
   padding: 12rem 0;
   font-size: 3rem;
-  color: #fff;
+  color: rgba(141, 140, 140, 0.829);
 }
 .header-content a:hover{
   text-decoration:none;
-  color:#f52e2e;
+  color:#ff151585;
 }
 
 
@@ -97,12 +98,12 @@ header {
   float:right;
 }
 .header-content button {
-  background-color: #f52e2e;
+  background-color: #dbd8d8;
   border: none;
   border-radius: 5px;
   padding: 10px;
   position: absolute;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;

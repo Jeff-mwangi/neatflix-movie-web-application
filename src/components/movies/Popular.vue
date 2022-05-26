@@ -7,11 +7,6 @@
         :alt="movie.title"
         class="imgx"
       />
-      <p class="release-date">Release Date: {{ movie.release_date }}</p>
-      <p>Watched: {{ movie.vote_count }}</p>
-      <p>Rating: {{ movie.vote_average }}</p>
-      <!-- <h3>{{movie.title}} Overview</h3> -->
-          <!-- <p>{{movie.overview}}</p> -->
     </div>
   </div>
   

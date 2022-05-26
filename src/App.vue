@@ -15,7 +15,7 @@ export default {
 
 <style>
 #app {
-  background-color: rgb(63, 4, 110);
+  background-color: rgb(19, 3, 32);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;

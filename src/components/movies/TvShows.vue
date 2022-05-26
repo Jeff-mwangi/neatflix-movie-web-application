@@ -8,9 +8,6 @@
         :alt="movie.title"
         class="imgx"
       />
-      <p class="release-date">First Air Date: {{ movie.first_air_date }}</p>
-      <p>Watched: {{ movie.vote_count }}</p>
-      <p>Rating: {{ movie.vote_average }}</p>
     </div>
   </div>
 
