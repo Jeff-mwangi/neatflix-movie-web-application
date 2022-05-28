@@ -1,15 +1,7 @@
 <template>
   <header class="hero-image">
     <div class="header-content">
-      <div v-for="movie in movies" :key="movie.id">
-      <img
-        :src='getImages()'
-      />
-      
-    </div>
       <!-- Implement previous and next arrows to display images -->
-      <a href="#" class="previous">&lt;</a>
-      <a href="#" class="next">&gt;</a>
       <button>
         <img src="../../assets/imgs/play.jpg" width="35" alt="" srcset="" />Play
       </button>
@@ -28,14 +20,15 @@ export default {
   methods: {
     //loopoing through images in movies array
     getImages(){
-  setTimeout(() =>{
-   var images = this.movies.forEach(movie => {
-       this.movies.push(movie.poster_path);
-        return images('https://image.tmdb.org/t/p/w500' + movie.poster_path);
-      });
-      },3000);
-
+      setTimeout(() => {
+        return this.movies.map(movie => {
+          return `'https://image.tmdb.org/t/p/w500' + ${movie.poster_path}`;
+        });
+      }, 1000);
     },
+    mounted() {
+    this.getImages();
+  },
   },
   created() {
     let url ="https://api.themoviedb.org/3/movie/popular?api_key=18a017b1725a276ac9a9838ec5345147&language=en-US&page=1";

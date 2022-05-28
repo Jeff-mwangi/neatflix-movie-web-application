@@ -1,6 +1,6 @@
 <template>
 <!-- <Header /> -->
-<Header2 />
+<Header />
 <div class="container-fluid">
   <Popular />
   <TopRated />

@@ -17,7 +17,7 @@
   <a href="#">Movies</a>
   <a href="#">Series</a>
   <a href="#">Contact</a>
-  <input type="search" name="search" id="search" placeholder="Search Movies">
+  <input type="search" name="search" id="search" placeholder="Search Movies ">
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776;</span>

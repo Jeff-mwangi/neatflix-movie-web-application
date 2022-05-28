@@ -11,6 +11,8 @@
       <button>
         <img src="../../assets/imgs/play.jpg" width="35" alt="" srcset="" />Play
       </button>
+      <div class="more-info">&#9432; <br> info
+      </div>
     </div>
   </header>
 </template>
@@ -20,8 +22,16 @@ export default {
   name: "Header",
   methods: {
     heroImages() {
+      if(screen.width<=778){
+        var images = [
+          "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1301789770l/10140661.jpg",
+          "https://terrigen-cdn-dev.marvel.com/content/prod/1x/mrbs_1sht_tsr_plf_1350x2000_thumbnail_675x1000_thumbnail_0.jpg",
+        ]
+      }else{
       // add images in an array and loop through them to display them in the header image section
-      let images = [
+      var images = [
+        "https://www.vitalthrills.com/wp-content/uploads/2022/02/morbius.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/61JE2Z-XapL._RI_.jpg",
         "https://netflixjunkie.com/wp-content/uploads/2022/04/AAAABXq_vQJf0hxGmUQqHnb8nXwpz8iEmzC2upISv1MYxfE2kXO-IouDyL-TuAAkSqEn-iPui5s3ax8In2XqquIQkQ7L7csL.jpg",
         "https://cdn.wallpapersafari.com/76/85/fFsbXB.jpg",
         "https://www.teahub.io/photos/full/67-670663_hollywood-movie-poster-hd.jpg",
@@ -33,6 +43,7 @@ export default {
         "https://wallpapercave.com/uwp/uwp170129.png",
         "https://www.renderhub.com/renderhub/black-panther-movie-poster-3d-wallpaper/black-panther-movie-poster-3d-wallpaper_2560x1024.jpg",
       ];
+      }
       let previous = document.querySelector(".previous");
       let next = document.querySelector(".next");
       let i = 0;
@@ -68,9 +79,8 @@ export default {
 
 <style scoped>
 header {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2)),
-    url("https://www.renderhub.com/renderhub/black-panther-movie-poster-3d-wallpaper/black-panther-movie-poster-3d-wallpaper_2560x1024.jpg");
   background-size: 100% 100%;
+  aspect-ratio:auto;
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
@@ -115,9 +125,26 @@ header {
   left: 8%;
   box-shadow: 0px 0px 10px rgb(247, 247, 247);
 }
+.more-info {
+  position: absolute;
+  top: 60%;
+  left: 17%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+.more-info:hover {
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
+}
 .header-content button:hover {
   background: rgba(255, 255, 255, 0.918);
   color: black;
+  box-shadow: 0px 0px 10px rgb(247, 247, 247);
+  transition: all 0.8s ease-in-out;
+  transform: scale(1.1);
 }
 .header-content h1 {
   font-size: 2.2rem;
@@ -150,11 +177,19 @@ header {
     left: 0%;
   }
   .header-content button {
-    font-size: 0.3rem;
+    padding:1px 8px;
     top: 47%;
+  }
+  .more-info{
+    top: 47%;
+    left: 35%;
+    font-size:1rem;
   }
   .header-content p {
     display: none;
+  }
+  .previous,.next{
+    display:none;
   }
 }
 </style>

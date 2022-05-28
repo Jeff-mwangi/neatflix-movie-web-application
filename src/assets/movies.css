@@ -46,7 +46,7 @@
 }
 @media (max-width: 768px) {
   .grid-x {
-    grid-auto-columns: 6rem;
+    grid-auto-columns: 8rem;
     grid-template-columns: repeat(auto-fill, minmax(7rem));
   }
 }
