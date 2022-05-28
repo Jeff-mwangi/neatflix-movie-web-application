@@ -26,10 +26,18 @@ export default {
         var images = [
           "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1301789770l/10140661.jpg",
           "https://terrigen-cdn-dev.marvel.com/content/prod/1x/mrbs_1sht_tsr_plf_1350x2000_thumbnail_675x1000_thumbnail_0.jpg",
-        ]
-      }else{
+          "https://assets-prd.ignimgs.com/2021/11/17/turning-red-ver3-button-1637176612873.jpg?width=300",
+          "https://image.tmdb.org/t/p/w500/zT5ynZ0UR6HFfWQSRf2uKtqCyWD.jpg",
+          "https://image.tmdb.org/t/p/w500/bMUhBeMp0vLQzaPBX0izFdnFvh0.jpg",
+          "https://image.tmdb.org/t/p/w500/x5o8cLZfEXMoZczTYWLrUo1P7UJ.jpg",
+          "https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg",
+          "https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg",
+          ]
+      }
+      else{
       // add images in an array and loop through them to display them in the header image section
       var images = [
+        "https://ralingo.com/wp-content/uploads/2022/03/maxresdefault-1.jpg",
         "https://www.vitalthrills.com/wp-content/uploads/2022/02/morbius.jpg",
         "https://images-na.ssl-images-amazon.com/images/I/61JE2Z-XapL._RI_.jpg",
         "https://netflixjunkie.com/wp-content/uploads/2022/04/AAAABXq_vQJf0hxGmUQqHnb8nXwpz8iEmzC2upISv1MYxfE2kXO-IouDyL-TuAAkSqEn-iPui5s3ax8In2XqquIQkQ7L7csL.jpg",
@@ -114,7 +122,7 @@ header {
   background-color: #ffffff;
   border: none;
   border-radius: 3px;
-  padding: 10px 20px;
+  padding: 3px 20px;
   position: absolute;
   color: rgb(0, 0, 0);
   font-size: 1.2rem;
