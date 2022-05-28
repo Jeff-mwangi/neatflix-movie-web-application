@@ -1,14 +1,16 @@
 <template>
   <header class="hero-image">
     <div class="header-content">
-     <!-- Implement previous and next arrows to display images -->
-      <a href="#" class="previous">&laquo;</a>
-      <a href="#" class="next">&raquo;</a>
+      <!-- Implement previous and next arrows to display images -->
+      <a href="#" class="previous">&lt;</a>
+      <a href="#" class="next">&gt;</a>
       <!-- <h1>BLACK PANTHER</h1> -->
       <!-- <p>
          Laura and Massimo are back and hotter than ever. But the reunited couple's new beginning is complicated by Massimo’s family ties and a mysterious man who enters Laura’s life to win her heart and trust, at any cost.
         </p> -->
-      <button>Play</button>
+      <button>
+        <img src="../../assets/imgs/play.jpg" width="35" alt="" srcset="" />Play
+      </button>
     </div>
   </header>
 </template>
@@ -43,22 +45,22 @@ export default {
         }
       }, 6000);
       previous.addEventListener("click", () => {
-      i--;
-      if (i < 0) {
-        i = images.length - 1;
-      }
-      hero.style.backgroundImage = `linear-gradient(to right,rgba(0, 0, 0, 0.2)),url(${images[i]})`;
-    });
-    next.addEventListener("click", () => {
-      i++;
-      if (i >= images.length) {
-        i = 0;
-      }
-      hero.style.backgroundImage = `linear-gradient(to right,rgba(0, 0, 0, 0.7)),url(${images[i]})`;
-    });
-  },
+        i--;
+        if (i > 0) {
+          i = images.length - 1;
+        }
+        hero.style.backgroundImage = `linear-gradient(to right,rgba(0, 0, 0, 0.2)),url(${images[i]})`;
+      });
+      next.addEventListener("click", () => {
+        i++;
+        if (i >= images.length) {
+          i = 0;
+        }
+        hero.style.backgroundImage = `linear-gradient(to right,rgba(0, 0, 0, 0.7)),url(${images[i]})`;
+      });
     },
-     mounted() {
+  },
+  mounted() {
     this.heroImages();
   },
 };
@@ -66,7 +68,7 @@ export default {
 
 <style scoped>
 header {
-  background-image: linear-gradient(to right,rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2)),
     url("https://www.renderhub.com/renderhub/black-panther-movie-poster-3d-wallpaper/black-panther-movie-poster-3d-wallpaper_2560x1024.jpg");
   background-size: 100% 100%;
   background-position: center center;
@@ -78,30 +80,31 @@ header {
   justify-content: center;
   align-items: center;
 }
-.header-content a{
+.header-content a {
   padding: 12rem 0;
   font-size: 3rem;
   color: rgba(141, 140, 140, 0.829);
 }
-.header-content a:hover{
-  text-decoration:none;
-  color:#ff151585;
+.header-content a:hover {
+  text-decoration: none;
+  color: #fffffff5;
+  transform: scale(1.1);
+  transition: 2s;
 }
 
-
-.previous{
+.previous {
   margin-left: 1.5rem;
-  float:left;
+  float: left;
 }
-.next{
+.next {
   margin-right: 1.5rem;
-  float:right;
+  float: right;
 }
 .header-content button {
-  background-color: #dbd8d8;
+  background-color: #ffffff;
   border: none;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 3px;
+  padding: 10px 20px;
   position: absolute;
   color: rgb(0, 0, 0);
   font-size: 1.2rem;
@@ -113,8 +116,8 @@ header {
   box-shadow: 0px 0px 10px rgb(247, 247, 247);
 }
 .header-content button:hover {
-  background: rgb(77, 9, 133);
-  color: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.918);
+  color: black;
 }
 .header-content h1 {
   font-size: 2.2rem;

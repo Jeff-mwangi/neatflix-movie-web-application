@@ -1,5 +1,6 @@
 <template>
-<Header />
+<!-- <Header /> -->
+<Header2 />
 <div class="container-fluid">
   <Popular />
   <TopRated />
@@ -19,6 +20,7 @@ import NowPlaying from "../components/movies/NowPlaying.vue"
 import UpComing from "../components/movies/UpComing.vue"
 import Popular from "../components/movies/Popular.vue"
 import Header from "../components/Nav/Header.vue"
+import Header2 from "../components/header/Header2.vue"
 
 const props = defineProps({
   title: {
