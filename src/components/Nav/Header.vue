@@ -4,25 +4,33 @@
       <!-- Implement previous and next arrows to display images -->
       <a href="#" class="previous">&lt;</a>
       <a href="#" class="next">&gt;</a>
-      <!-- <h1>BLACK PANTHER</h1> -->
-      <!-- <p>
-         Laura and Massimo are back and hotter than ever. But the reunited couple's new beginning is complicated by Massimo’s family ties and a mysterious man who enters Laura’s life to win her heart and trust, at any cost.
-        </p> -->
+      <half-circle-spinner id="loading"
+      style="top:14rem"
+        :animation-duration="1000"
+        :size="40"
+        color="#ff1d5e"
+      />
       <button>
         <img src="../../assets/imgs/play.jpg" width="35" alt="" srcset="" />Play
       </button>
-      <div class="more-info">&#9432; <br> info
+      <div class="more-info">
+        &#9432; <br />
+        info
       </div>
     </div>
   </header>
 </template>
 
 <script>
+  import { HalfCircleSpinner } from 'epic-spinners'
 export default {
   name: "Header",
+  components: {
+    HalfCircleSpinner
+    },
   methods: {
     heroImages() {
-      if(screen.width<=778){
+      if (screen.width <= 778) {
         var images = [
           "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1301789770l/10140661.jpg",
           "https://image.tmdb.org/t/p/w500/6JjfSchsU6daXk2AKX8EEBjO3Fm.jpg",
@@ -35,25 +43,24 @@ export default {
           "https://image.tmdb.org/t/p/w500/pDc2HxQtC0MlKD4QfRvmKREEyhc.jpg",
           "https://image.tmdb.org/t/p/w500/zhLKlUaF1SEpO58ppHIAyENkwgw.jpg",
           "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
-          ]
-      }
-      else{
-      // add images in an array and loop through them to display them in the header image section
-      var images = [
-        "https://ralingo.com/wp-content/uploads/2022/03/maxresdefault-1.jpg",
-        "https://www.vitalthrills.com/wp-content/uploads/2022/02/morbius.jpg",
-        "https://images-na.ssl-images-amazon.com/images/I/61JE2Z-XapL._RI_.jpg",
-        "https://netflixjunkie.com/wp-content/uploads/2022/04/AAAABXq_vQJf0hxGmUQqHnb8nXwpz8iEmzC2upISv1MYxfE2kXO-IouDyL-TuAAkSqEn-iPui5s3ax8In2XqquIQkQ7L7csL.jpg",
-        "https://cdn.wallpapersafari.com/76/85/fFsbXB.jpg",
-        "https://www.teahub.io/photos/full/67-670663_hollywood-movie-poster-hd.jpg",
-        "https://wallpapercave.com/wp/jCDL6OV.jpg",
-        "https://www.mmppicture.co.in/wp-content/uploads/2022/03/The-Kashmir-Files-Poster-1-1080x608.jpg",
-        "https://wallpaperbat.com/img/227405-avengers-endgame-2019-poster-wallpaper-avengers-movie-posters.jpg",
-        "https://filmspell.com/wp-content/uploads/2019/10/Joker2019-Movie-HD-Poster-FilmSpell_1-990x556.jpg",
-        "https://www.michigansportszone.com/wp-content/uploads/2021/08/83422625.jpg",
-        "https://wallpapercave.com/uwp/uwp170129.png",
-        "https://www.renderhub.com/renderhub/black-panther-movie-poster-3d-wallpaper/black-panther-movie-poster-3d-wallpaper_2560x1024.jpg",
-      ];
+        ];
+      } else {
+        // add images in an array and loop through them to display them in the header image section
+        var images = [
+          "https://ralingo.com/wp-content/uploads/2022/03/maxresdefault-1.jpg",
+          "https://www.vitalthrills.com/wp-content/uploads/2022/02/morbius.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/61JE2Z-XapL._RI_.jpg",
+          "https://netflixjunkie.com/wp-content/uploads/2022/04/AAAABXq_vQJf0hxGmUQqHnb8nXwpz8iEmzC2upISv1MYxfE2kXO-IouDyL-TuAAkSqEn-iPui5s3ax8In2XqquIQkQ7L7csL.jpg",
+          "https://cdn.wallpapersafari.com/76/85/fFsbXB.jpg",
+          "https://www.teahub.io/photos/full/67-670663_hollywood-movie-poster-hd.jpg",
+          "https://wallpapercave.com/wp/jCDL6OV.jpg",
+          "https://www.mmppicture.co.in/wp-content/uploads/2022/03/The-Kashmir-Files-Poster-1-1080x608.jpg",
+          "https://wallpaperbat.com/img/227405-avengers-endgame-2019-poster-wallpaper-avengers-movie-posters.jpg",
+          "https://filmspell.com/wp-content/uploads/2019/10/Joker2019-Movie-HD-Poster-FilmSpell_1-990x556.jpg",
+          "https://www.michigansportszone.com/wp-content/uploads/2021/08/83422625.jpg",
+          "https://wallpapercave.com/uwp/uwp170129.png",
+          "https://www.renderhub.com/renderhub/black-panther-movie-poster-3d-wallpaper/black-panther-movie-poster-3d-wallpaper_2560x1024.jpg",
+        ];
       }
       let previous = document.querySelector(".previous");
       let next = document.querySelector(".next");
@@ -81,9 +88,15 @@ export default {
         hero.style.backgroundImage = `linear-gradient(to right,rgba(0, 0, 0, 0.7)),url(${images[i]})`;
       });
     },
+    hideLoader(){
+      setInterval(()=>{
+      document.getElementById('loading').style.display = 'none';
+    },5500);
+    },
   },
   mounted() {
     this.heroImages();
+    this.hideLoader();
   },
 };
 </script>
@@ -91,7 +104,7 @@ export default {
 <style scoped>
 header {
   background-size: 100% 100%;
-  aspect-ratio:auto;
+  aspect-ratio: auto;
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
@@ -144,12 +157,17 @@ header {
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
-  
 }
 .more-info:hover {
   transition: all 0.4s ease-in-out;
   transform: scale(1.1);
 }
+.half-circle-spinner .circle[data-v-bf5bf2dc]{
+  top:13rem;
+}
+#loading {
+left: 45%;
+  }
 .header-content button:hover {
   background: rgba(255, 255, 255, 0.918);
   color: black;
@@ -179,7 +197,7 @@ header {
 
 @media screen and (max-width: 768px) {
   header {
-    height: 60vh;
+    height: 70vh;
     width: 100%;
   }
   .header-content h1 {
@@ -188,19 +206,20 @@ header {
     left: 0%;
   }
   .header-content button {
-    padding:1px 8px;
+    padding: 1px 8px;
     top: 47%;
   }
-  .more-info{
+  .more-info {
     top: 47%;
     left: 35%;
-    font-size:1rem;
+    font-size: 1rem;
   }
   .header-content p {
     display: none;
   }
-  .previous,.next{
-    display:none;
+  .previous,
+  .next {
+    display: none;
   }
 }
 </style>
