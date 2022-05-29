@@ -135,7 +135,7 @@ header {
   float: right;
 }
 .header-content button {
-  background-color: #ffffff;
+  background-color: #ffffffb6;
   border: none;
   border-radius: 3px;
   padding: 3px 20px;
@@ -147,13 +147,13 @@ header {
   transition: all 0.3s ease-in-out;
   top: 60%;
   left: 8%;
-  box-shadow: 0px 0px 10px rgb(247, 247, 247);
+  box-shadow: 0px 0px 10px rgba(247, 247, 247, 0.377);
 }
 .more-info {
   position: absolute;
   top: 60%;
   left: 18%;
-  color: #ffffff;
+  color: #ffffffb6;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
@@ -169,9 +169,8 @@ header {
 left: 45%;
   }
 .header-content button:hover {
-  background: rgba(255, 255, 255, 0.918);
+  background: rgba(255, 255, 255, 0.616);
   color: black;
-  box-shadow: 0px 0px 10px rgb(247, 247, 247);
   transition: all 0.8s ease-in-out;
   transform: scale(1.1);
 }
