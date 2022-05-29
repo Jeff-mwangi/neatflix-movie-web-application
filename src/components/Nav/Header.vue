@@ -4,12 +4,12 @@
       <!-- Implement previous and next arrows to display images -->
       <a href="#" class="previous">&lt;</a>
       <a href="#" class="next">&gt;</a>
-      <half-circle-spinner id="loading"
+      <!-- <half-circle-spinner id="loading"
       style="top:14rem"
         :animation-duration="1000"
         :size="40"
         color="#ff1d5e"
-      />
+      /> -->
       <button>
         <img src="../../assets/imgs/play.jpg" width="35" alt="" srcset="" />Play
       </button>
@@ -103,6 +103,7 @@ export default {
 
 <style scoped>
 header {
+  background-image: linear-gradient(to right,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)),url("https://www.okchicas.com/wp-content/uploads/2022/05/Netflix-revela-primeras-imagenes-de-First-Kill-la-nueva-serie-de-vampiros.jpg");
   background-size: 100% 100%;
   aspect-ratio: auto;
   background-position: center center;
@@ -196,6 +197,7 @@ left: 45%;
 
 @media screen and (max-width: 768px) {
   header {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url("https://image.tmdb.org/t/p/w500/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg");
     height: 70vh;
     width: 100%;
   }
