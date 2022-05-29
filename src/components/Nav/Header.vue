@@ -152,7 +152,7 @@ header {
 .more-info {
   position: absolute;
   top: 60%;
-  left: 17%;
+  left: 18%;
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: bold;
@@ -207,11 +207,11 @@ left: 45%;
   }
   .header-content button {
     padding: 1px 8px;
-    top: 47%;
+    top: 60%;
   }
   .more-info {
-    top: 47%;
-    left: 35%;
+    top: 60%;
+    left: 37%;
     font-size: 1rem;
   }
   .header-content p {
