@@ -1,5 +1,5 @@
 <template>
- <Category title="TV Shows"/>
+<h3>Tv Shows</h3>
   <div class="grid-x scroll-inline">
     <div class="g-card" v-for="movie in movies" :key="movie.id">
       <img

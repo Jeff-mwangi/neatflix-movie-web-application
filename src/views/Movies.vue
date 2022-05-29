@@ -2,6 +2,7 @@
 <!-- <Header /> -->
 <Header />
 <div class="container-fluid">
+  <Trending />
   <Popular />
   <TopRated />
   <TvShows />
@@ -21,6 +22,7 @@ import UpComing from "../components/movies/UpComing.vue"
 import Popular from "../components/movies/Popular.vue"
 import Header from "../components/Nav/Header.vue"
 import Header2 from "../components/header/Header2.vue"
+import Trending from "../components/movies/Trending.vue";
 
 const props = defineProps({
   title: {

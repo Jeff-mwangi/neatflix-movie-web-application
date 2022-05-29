@@ -1,5 +1,5 @@
 <template>
- <Category title="Now Playing"/>
+<h3>Now Playing</h3>
   <div class="grid-x scroll-inline">
     <div class="g-card" v-for="movie in movies" :key="movie.id">
       <img

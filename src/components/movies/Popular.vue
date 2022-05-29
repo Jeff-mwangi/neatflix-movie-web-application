@@ -1,4 +1,5 @@
 <template>
+  <h3>Popular</h3>
   <div class="grid-x scroll-inline">
     <div class="g-card" v-for="movie in movies" :key="movie.id">
       <img
