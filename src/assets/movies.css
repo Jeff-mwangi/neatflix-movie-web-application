@@ -44,9 +44,6 @@
   font-size: 0.8em;
   color: #999;
 }
-h3{
-  color: #ffffffb6;
-}
 @media (max-width: 768px) {
   .grid-x {
     grid-auto-columns: 8rem;

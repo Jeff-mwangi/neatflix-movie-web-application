@@ -111,7 +111,6 @@ header {
   width: 100%;
   height: 80vh;
   margin-bottom: 20px;
-  margin-top: 2px;
   justify-content: center;
   align-items: center;
 }
