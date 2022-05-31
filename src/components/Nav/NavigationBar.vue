@@ -41,8 +41,11 @@ export default {
 
 <style scoped>
 nav {
-  height: 0%;
-  background-color: rgba(32, 5, 54, 0.664);
+  position: absolute;
+  position: fixed;
+  width: 100%;
+  height: 8%;
+  background-color: rgba(32, 5, 54, 0.726);
   padding-top: 2px;
 }
 .sidenav{

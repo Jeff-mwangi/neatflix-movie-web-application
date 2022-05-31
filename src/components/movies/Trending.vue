@@ -1,5 +1,4 @@
 <template>
-<h3>Trending</h3>
   <div class="grid-x scroll-inline">
     <div class="g-card" v-for="movie in movies" :key="movie.id">
       <img
@@ -44,3 +43,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.imgx {
+  margin-top: 0px;
+}
+</style>

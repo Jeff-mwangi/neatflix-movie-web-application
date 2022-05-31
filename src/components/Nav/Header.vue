@@ -1,5 +1,6 @@
 <template>
   <header class="hero-image">
+    <NavigationBar />
     <div class="header-content">
       <!-- Implement previous and next arrows to display images -->
       <a href="#" class="previous">&lt;</a>
@@ -22,11 +23,13 @@
 </template>
 
 <script>
+import NavigationBar from '../Nav/NavigationBar.vue'
   import { HalfCircleSpinner } from 'epic-spinners'
 export default {
   name: "Header",
   components: {
-    HalfCircleSpinner
+    HalfCircleSpinner,
+    NavigationBar
     },
   methods: {
     heroImages() {
@@ -109,13 +112,12 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 80vh;
-  margin-bottom: 20px;
+  height: 89vh;
   justify-content: center;
   align-items: center;
 }
 .header-content a {
-  padding: 12rem 0;
+  padding: 17rem 0;
   font-size: 3rem;
   color: rgba(141, 140, 140, 0.829);
 }

@@ -26,6 +26,9 @@ export default {
   color: rgb(161, 160, 160);
   border-radius: 5px;
 }
+h4{
+color: #5a5a5ab6;
+}
 .line{
   width: 80%;
   height: 1px;

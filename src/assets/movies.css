@@ -16,6 +16,9 @@
 .scroll-inline {
   scroll-snap-type: inline mandatory;
 }
+h3{
+  color:#ffffffb6;
+}
 .scroll-inline > * {
   scroll-snap-align: start;
 }
