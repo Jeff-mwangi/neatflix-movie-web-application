@@ -2,12 +2,18 @@
   <h3>Popular</h3>
   <div class="grid-x scroll-inline">
     <div class="g-card" v-for="movie in movies" :key="movie.id">
+    <router-link 
+    :to="{ 
+     name: 'Overview',
+     params: { id: movie.id } 
+     }">
       <img
         @click="showModal=true" loading="lazy"
         :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
         :alt="movie.title"
         class="imgx"
       />
+    </router-link>
     </div>
   </div>
   
@@ -40,7 +46,7 @@ export default {
   },
   methods: {
     showMovies(id) {
-      this.$router.push({ name: "overview", params: { id: id } });
+      this.$router.push({ name: "Overview", params: { id: movie.id } });
     },
   },
 };
