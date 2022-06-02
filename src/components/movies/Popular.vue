@@ -29,6 +29,12 @@ export default {
     Modal,
     Category
 },
+props: {
+  movies: {
+    type: Array,
+    required: true
+  }
+},
   data() {
     return {
       movies: [],
