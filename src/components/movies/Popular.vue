@@ -31,7 +31,7 @@ export default {
 },
 props: {
   movies: {
-    type: Array,
+    type: String ,
     required: true
   }
 },
