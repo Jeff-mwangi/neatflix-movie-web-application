@@ -29,12 +29,7 @@ export default {
     Modal,
     Category
 },
-props: {
-  movies: {
-    type: String ,
-    required: true
-  }
-},
+props: ['movies'],
   data() {
     return {
       movies: [],
