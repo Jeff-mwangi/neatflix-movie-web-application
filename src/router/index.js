@@ -15,14 +15,9 @@ const router = createRouter({
       path: "/overview/:id",
       name:"Overview",
       component: () => import("../views/Overview.vue"),
-     beforeLoad: async(to) => {
-        state.loading.value = true;
-        await usePTrackStore().fetchAll(to.params.id);
-        state.loading.value = false;
-    },
+      props: true,
     },
   ],
-  strict: true, // applies to all routes
 });
 
 export default router;

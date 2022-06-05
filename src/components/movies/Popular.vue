@@ -5,7 +5,10 @@
     <router-link 
     :to="{ 
      name: 'Overview',
-     params: { id: movie.id } 
+      params: movie,
+     query: { 
+      id: movie.id,
+      title: movie.title },
      }">
       <img
         @click="showModal=true" loading="lazy"
@@ -29,7 +32,7 @@ export default {
     Modal,
     Category
 },
-props: ['movies'],
+
   data() {
     return {
       movies: [],
