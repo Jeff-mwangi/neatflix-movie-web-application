@@ -21,16 +21,12 @@ export default {
     name: "Overview",
   props: {
     title: String,
+    backdrop_path: String,
     overview: String,
     release_date: String,
     vote_average: String,
     vote_count: String,
     popularity: String,
   },
-  methods: {
-    getImgUrl(pic) {
-    return require('https://image.tmdb.org/t/p/w500'+pic)
-}
   }
-}
 </script>

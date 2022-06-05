@@ -9,7 +9,7 @@
      query: { 
       id: movie.id,
       title: movie.title,
-      img: movie.poster_path,
+      backdrop_path: movie.backdrop_path,
       overview: movie.overview,
       release_date: movie.release_date,
       vote_average: movie.vote_average,
