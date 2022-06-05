@@ -4,7 +4,7 @@
      <router-link 
     :to="{ 
      name: 'Overview',
-      params: movie,
+    params: movie,
      query: { 
       id: movie.id,
       title: movie.title,
@@ -14,7 +14,7 @@
       vote_average: movie.vote_average,
       vote_count: movie.vote_count,
       popularity: movie.popularity,
-       },
+      },
      }">
       <img
         :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path"

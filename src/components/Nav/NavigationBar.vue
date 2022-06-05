@@ -86,7 +86,7 @@ nav {
 }
 .sidenav input{
   background-color:#ebebeb;
-  border-radius: 10px;
+  border-radius: 0px 10px 0px 10px;
   text-align: center;
   border:none;
   height: 38px;
@@ -102,6 +102,7 @@ nav {
 input:hover,
 input:focus {
   outline: none;
+  border-radius: 10px 0px 10px 0px;
   background-color:#ebebeb;
   transition: active;
   box-shadow: 0px 0px 10px rgb(247, 247, 247);

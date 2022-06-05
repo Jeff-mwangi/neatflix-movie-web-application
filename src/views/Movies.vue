@@ -20,8 +20,7 @@ import TvShows from "../components/movies/TvShows.vue"
 import NowPlaying from "../components/movies/NowPlaying.vue"
 import UpComing from "../components/movies/UpComing.vue"
 import Popular from "../components/movies/Popular.vue"
-import Header from "../components/Nav/Header.vue"
-import Header2 from "../components/header/Header2.vue"
+import Header from "../components/header/Header.vue"
 import Trending from "../components/movies/Trending.vue";
 
 const props = defineProps({

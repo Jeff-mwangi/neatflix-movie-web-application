@@ -11,13 +11,12 @@
         :size="40"
         color="#ff1d5e"
       /> -->
+      <div class="play">
       <button>
         <img src="../../assets/imgs/play.jpg" width="35" alt="" srcset="" />Play
       </button>
-      <div class="more-info">
-        &#9432; <br />
-        info
       </div>
+      <div class="more-info"><button>More Info</button></div>
     </div>
   </header>
 </template>
@@ -69,7 +68,7 @@ export default {
       let next = document.querySelector(".next");
       let i = 0;
       let hero = document.querySelector(".hero-image");
-      let heroImages = setInterval(() => {
+      setInterval(() => {
         hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(${images[i]})`;
         i++;
         if (i >= images.length) {
@@ -137,10 +136,9 @@ header {
   float: right;
 }
 .header-content button {
-  background-color: #ffffffb6;
+  background-color: #ffffff81;
   border: none;
   border-radius: 3px;
-  padding: 3px 20px;
   position: absolute;
   color: rgb(0, 0, 0);
   font-size: 1.2rem;
@@ -151,18 +149,15 @@ header {
   left: 8%;
   box-shadow: 0px 0px 10px rgba(247, 247, 247, 0.377);
 }
-.more-info {
-  position: absolute;
+.play button{
+  padding: 3px 25px;
+}
+.more-info button{
+  padding: 6px 50px;
   top: 60%;
   left: 18%;
-  color: #ffffffb6;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-.more-info:hover {
-  transition: all 0.4s ease-in-out;
-  transform: scale(1.1);
+
+
 }
 .half-circle-spinner .circle[data-v-bf5bf2dc]{
   top:13rem;
@@ -173,8 +168,8 @@ left: 45%;
 .header-content button:hover {
   background: rgba(255, 255, 255, 0.616);
   color: black;
-  transition: all 0.8s ease-in-out;
-  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.07);
 }
 .header-content h1 {
   font-size: 2.2rem;
@@ -208,13 +203,14 @@ left: 45%;
     left: 0%;
   }
   .header-content button {
-    padding: 1px 8px;
+    padding: 1px 10px;
     top: 60%;
   }
-  .more-info {
+  .more-info button {
+    padding: 3.5px 10px;
     top: 60%;
-    left: 37%;
-    font-size: 1rem;
+    left: 30%;
+    font-size: 1.2rem;
   }
   .header-content p {
     display: none;
