@@ -8,7 +8,14 @@
       params: movie,
      query: { 
       id: movie.id,
-      title: movie.title },
+      title: movie.title,
+      img: movie.poster_path,
+      overview: movie.overview,
+      release_date: movie.release_date,
+      vote_average: movie.vote_average,
+      vote_count: movie.vote_count,
+      popularity: movie.popularity,
+       },
      }">
       <img
         @click="showModal=true" loading="lazy"
