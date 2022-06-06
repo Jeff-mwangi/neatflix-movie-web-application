@@ -1,4 +1,4 @@
-<template>
+<template >
 <nav class="navbar navbar-expand-md navbar-dark sticky-top">
     <div class="container-fluid">
 <a class="navbar-brand" href="#">
@@ -35,11 +35,21 @@ export default {
     closeNav() {
       document.getElementById("mySidenav").style.width = "0px";
     },
+    search(){
+      document.getElementById('search').enterKeyHint
+    }
   },
 };
 </script>
 
 <style scoped>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 nav {
   position: absolute;
   position: fixed;
@@ -85,10 +95,13 @@ nav {
   margin-left: 50px;
 }
 .sidenav input{
-  background-color:#ebebeb;
+   background: white url("../../assets/imgs/search.svg") no-repeat 15px center;
+  background-size: 15px 15px;
   border-radius: 0px 10px 0px 10px;
   text-align: center;
+  width: 350px;
   border:none;
+  font-size: 1.2rem;
   height: 38px;
   right: 0;
   padding-right:0;
@@ -149,8 +162,9 @@ input:focus {
   cursor: pointer;
 }
 .sidenav input{
-  width:10rem;
-  margin-left:40px;
+  display: none;
+  background: white url("../../assets/imgs/search.svg") no-repeat 15px center;
+
   }
 }
 </style>

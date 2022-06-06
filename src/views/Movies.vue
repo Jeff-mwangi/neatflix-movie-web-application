@@ -8,6 +8,7 @@
   <TvShows />
   <NowPlaying />
   <UpComing />
+  <Search />
 </div>
   <Footer />
 </template>
@@ -22,6 +23,7 @@ import UpComing from "../components/movies/UpComing.vue"
 import Popular from "../components/movies/Popular.vue"
 import Header from "../components/header/Header.vue"
 import Trending from "../components/movies/Trending.vue";
+import Search from './Search.vue';
 
 const props = defineProps({
   title: {

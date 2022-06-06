@@ -1,5 +1,5 @@
 <template>
-<div class="cointainer">
+<div class="container">
   <div class="row">
     <div class="col-md-6">
       <div class="image">
@@ -42,6 +42,7 @@ export default {
 </script>
 
 <style scoped>
+
 h2{
     color: #fff;
     font-size: 2rem;
@@ -49,12 +50,6 @@ h2{
     text-align: center;
     margin-bottom: 1rem;
 }
-  img{
-    margin: 50px;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-  }
   .buttons{
     padding: 10px 100px 20px;
     display: flex;
@@ -72,11 +67,12 @@ h2{
       align-items: center;
     }
     img{
+      padding-left: auto;
       width: 300px;
       height: 300px;
     }
     .details{
-      padding: 50px 0px 50px 0px;
+      padding: 50px 20px 50px 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
