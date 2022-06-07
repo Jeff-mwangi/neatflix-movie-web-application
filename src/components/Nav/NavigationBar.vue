@@ -52,7 +52,6 @@ export default {
     },
     searchMovie(e){
       if(e.Key == "Enter"){
-         let url ="https://api.themoviedb.org/3/search/movie?api_key=18a017b1725a276ac9a9838ec5345147&query=money";
         fetch(`${this.base_url}movie?${this.api_key}&query=${this.query}`)
         .then(response=>{
           return response.json();
