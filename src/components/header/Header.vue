@@ -90,11 +90,6 @@ export default {
         hero.style.backgroundImage = `linear-gradient(to right,rgba(0, 0, 0, 0.7)),url(${images[i]})`;
       });
     },
-    hideLoader(){
-      setInterval(()=>{
-      document.getElementById('loading').style.display = 'none';
-    },5500);
-    },
   },
   mounted() {
     this.heroImages();

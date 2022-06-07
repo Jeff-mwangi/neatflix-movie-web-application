@@ -17,7 +17,14 @@
   <a href="#">Movies</a>
   <a href="#">Series</a>
   <a href="#">Contact</a>
-  <input type="search" name="search" id="search" placeholder="Search Movies ">
+  <input
+  type="search"
+  name="search" 
+  id="search" 
+  placeholder="Search Movies"
+  v-model ="query"
+  @keypress="searchMovie"
+  >
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776;</span>
@@ -28,6 +35,14 @@
 <script>
 export default {
   name: "NavigationBar",
+  data(){
+    return {
+    query : '',
+    api_key :'18a017b1725a276ac9a9838ec5345147',
+    base_url : 'https://api.themoviedb.org/3/search/',
+    movies: [],
+    }
+},
   methods: {
     openNav() {
       document.getElementById("mySidenav").style.width = "250px";
@@ -35,8 +50,17 @@ export default {
     closeNav() {
       document.getElementById("mySidenav").style.width = "0px";
     },
-    search(){
-      document.getElementById('search').enterKeyHint
+    searchMovie(e){
+      if(e.Key == "Enter"){
+         let url ="https://api.themoviedb.org/3/search/movie?api_key=18a017b1725a276ac9a9838ec5345147&query=money";
+        fetch(`${this.base_url}movie?${this.api_key}&query=${this.query}`)
+        .then(response=>{
+          return response.json();
+        })
+        .then((data) => {
+        this.movies = data.results;})
+        console.log(this.movies);
+      }
     }
   },
 };
@@ -49,7 +73,6 @@ export default {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 nav {
   position: absolute;
   position: fixed;
@@ -162,9 +185,9 @@ input:focus {
   cursor: pointer;
 }
 .sidenav input{
-  display: none;
-  background: white url("../../assets/imgs/search.svg") no-repeat 15px center;
-
+  width:90%;
+  margin-left:0.5rem;
   }
 }
+
 </style>
