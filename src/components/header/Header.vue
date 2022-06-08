@@ -13,7 +13,7 @@
       /> -->
       <div class="play">
       <button>
-        <img src="../../assets/imgs/play.jpg" width="35" alt="" srcset="" />Play
+         <v-lazy-image src="../../assets/imgs/play.jpg" width="35" alt="" srcset="" />Play
       </button>
       </div>
       <div class="more-info"><button>More Info</button></div>
@@ -22,13 +22,15 @@
 </template>
 
 <script>
+ import VLazyImage from "v-lazy-image";
 import NavigationBar from '../Nav/NavigationBar.vue'
   import { HalfCircleSpinner } from 'epic-spinners'
 export default {
   name: "Header",
   components: {
     HalfCircleSpinner,
-    NavigationBar
+    NavigationBar,
+     VLazyImage,
     },
   methods: {
     heroImages() {

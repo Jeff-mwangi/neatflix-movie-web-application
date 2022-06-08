@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="image">
-      <img :src="'https://image.tmdb.org/t/p/w500' + backdrop_path" :alt="title" />
+      <v-lazy-image :src="'https://image.tmdb.org/t/p/w500' + backdrop_path" :alt="title" />
       </div>
       <div class="buttons">
       <button class="btn btn-danger">Play</button>
@@ -26,6 +26,7 @@
 
 
 <script>
+import VLazyImage from "v-lazy-image";
 import'../components/movies/Popular.vue'
 export default {
     name: "Overview",
@@ -37,6 +38,9 @@ export default {
     vote_average: String,
     vote_count: String,
     popularity: String,
+  },
+  components: {
+    VLazyImage,
   },
   }
 </script>

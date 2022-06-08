@@ -51,17 +51,16 @@ export default {
       document.getElementById("mySidenav").style.width = "0px";
     },
     searchMovie(e){
-      if(e.Key == "Enter"){
-        fetch(`${this.base_url}movie?${this.api_key}&query=${this.query}`)
-        .then(response=>{
-          return response.json();
-        })
+      if(e.key === 'Enter'){
+        fetch(`${this.base_url}movie?api_key=${this.api_key}&query=${this.query}`)
+        .then((response) => response.json())
         .then((data) => {
-        this.movies = data.results;})
+        this.movies = data.results;
         console.log(this.movies);
-      }
+      });
     }
   },
+},
 };
 </script>
 

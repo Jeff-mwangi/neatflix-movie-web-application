@@ -17,7 +17,7 @@
       popularity: movie.popularity,
        },
      }">
-      <img
+      <v-lazy-image
         :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
         :alt="movie.title"
         class="imgx"
@@ -29,12 +29,14 @@
 </template>
 
 <script>
+import VLazyImage from "v-lazy-image";
 import Modal from "../Modal.vue";
 import Category from "../movie-categories-heading/Category.vue";
 
 export default {
   name: "TopRated",
   components: {
+    VLazyImage,
     Modal,
     Category
 },
