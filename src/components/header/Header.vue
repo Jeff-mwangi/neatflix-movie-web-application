@@ -93,7 +93,6 @@ export default {
   },
   mounted() {
     this.heroImages();
-    this.hideLoader();
   },
 };
 </script>
@@ -185,8 +184,14 @@ left: 45%;
   left: 2rem;
   transition: all 0.3s ease-in-out;
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1195px) {
+  .more-info button {
+    padding: 7.5px 12px;
+    top: 60%;
+    left: 23%;
+    font-size: 1.2rem;
+  }
+@media screen and (max-width: 794px) {
   header {
     background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url("https://image.tmdb.org/t/p/w500/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg");
     height: 70vh;
@@ -198,14 +203,19 @@ left: 45%;
     left: 0%;
   }
   .header-content button {
+    font-size: 0.8rem;
     padding: 1px 10px;
     top: 60%;
+  }
+  .play img{
+    width: 25px;
+
   }
   .more-info button {
     padding: 3.5px 10px;
     top: 60%;
-    left: 30%;
-    font-size: 1.2rem;
+    left: 33%;
+    font-size: 0.8rem;
   }
   .header-content p {
     display: none;
@@ -214,5 +224,6 @@ left: 45%;
   .next {
     display: none;
   }
+}
 }
 </style>

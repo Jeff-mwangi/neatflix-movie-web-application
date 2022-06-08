@@ -1,5 +1,4 @@
 <template>
-yoh
   <div class="grid-x scroll-inline">
     <div class="g-card" v-for="movie in movies" :key="movie.id">
      <router-link 
