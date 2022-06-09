@@ -25,6 +25,7 @@
   v-model ="query"
   @keypress="searchMovie"
   >
+  <img src="../../assets/imgs/avat.jpg" style="border-radius:50%;margin-left: 25px;cursor:pointer;" alt="" width="40" height="40" srcset="">
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776;</span>
