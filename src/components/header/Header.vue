@@ -1,6 +1,6 @@
 <template>
   <header class="hero-image">
-    <NavigationBar />
+    <!-- <NavigationBar /> -->
     <div class="header-content">
       <!-- Implement previous and next arrows to display images -->
       <a href="#" class="previous">&lt;</a>
@@ -23,13 +23,13 @@
 
 <script>
  import VLazyImage from "v-lazy-image";
-import NavigationBar from '../Nav/NavigationBar.vue'
+// import NavigationBar from '../Nav/NavigationBar.vue'
   import { HalfCircleSpinner } from 'epic-spinners'
 export default {
   name: "Header",
   components: {
     HalfCircleSpinner,
-    NavigationBar,
+    // NavigationBar,
      VLazyImage,
     },
   methods: {
