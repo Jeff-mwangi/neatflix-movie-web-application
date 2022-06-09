@@ -13,7 +13,7 @@
       /> -->
       <div class="play">
       <button>
-         <v-lazy-image src="../../assets/imgs/play.jpg" width="35" alt="" srcset="" />Play
+         <img src="../../assets/imgs/play.jpg" width="25" alt="" srcset="" />Play
       </button>
       </div>
       <div class="more-info"><button>More Info</button></div>
@@ -112,7 +112,7 @@ header {
   align-items: center;
 }
 .header-content a {
-  padding: 17rem 0;
+  padding-top: 17rem;
   font-size: 3rem;
   color: rgba(141, 140, 140, 0.829);
 }
@@ -120,15 +120,15 @@ header {
   text-decoration: none;
   color: #fffffff5;
   transform: scale(1.1);
-  transition: 2s;
+  transition: 0.2s;
 }
 
 .previous {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   float: left;
 }
 .next {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   float: right;
 }
 .header-content button {
@@ -146,10 +146,10 @@ header {
   box-shadow: 0px 0px 10px rgba(247, 247, 247, 0.377);
 }
 .play button{
-  padding: 3px 25px;
+  padding: 1px 20px;
 }
 .more-info button{
-  padding: 6px 50px;
+  padding: 1px 25px;
   top: 60%;
   left: 18%;
 
@@ -196,7 +196,7 @@ left: 45%;
 @media screen and (max-width: 794px) {
   header {
     background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url("https://image.tmdb.org/t/p/w500/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg");
-    height: 70vh;
+    height: 80vh;
     width: 100%;
   }
   .header-content h1 {
