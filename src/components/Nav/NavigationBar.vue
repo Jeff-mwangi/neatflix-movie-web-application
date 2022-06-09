@@ -25,7 +25,9 @@
   v-model ="query"
   @keypress="searchMovie"
   >
+  <div class="avatar">
   <img src="../../assets/imgs/avat.jpg" style="border-radius:50%;margin-left: 25px;cursor:pointer;" alt="" width="40" height="40" srcset="">
+  </div>
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776;</span>
@@ -159,23 +161,31 @@ input:focus {
   background-color: rgb(19, 3, 32);
   height: 100%;
   width: 0%;
+  margin-left: -16.5px;
   position: fixed;
   z-index: 1;
   top: 0;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 160px;
   justify-content: space-between;
 }
 
 .sidenav a {
   font-weight: bold;
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 62px;
   text-decoration: none;
   font-size: 1.5rem;
   color: #818181;
   display: block;
   transition: 0.3s;
+}
+.avatar img{
+  margin-top:-385px;
+  position:absolute;
+  left:35px;
+  width: 80px;
+  height: 80px;
 }
 .menu {
   display: block;
