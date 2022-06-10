@@ -67,6 +67,9 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  padding-top: 100px;
+}
 
 h2{
     color: #fff;

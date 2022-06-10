@@ -5,8 +5,8 @@
         <img
           src="../../assets/neatflix.svg"
           alt="The Movie DB"
-          width="120"
-          height="40"
+          width="100"
+          height="30"
         />
       </a>
 <div id="mySidenav" class="sidenav">
@@ -25,6 +25,9 @@
   v-model ="query"
   @keypress="searchMovie"
   >
+  <span class="avatar">
+  <img src="../../assets/imgs/avat.jpg" style="border-radius:50%;margin-left: 25px;cursor:pointer;" alt="" width="35" height="35" srcset="">
+  </span>
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776;</span>
@@ -91,7 +94,7 @@ nav {
   position: absolute;
   position: fixed;
   width: 100%;
-  height: 8%;
+  height: 50px;
   background-color: rgba(32, 5, 54, 0.726);
   padding-top: 2px;
 }
@@ -103,13 +106,13 @@ nav {
 .sidenav a{
   position: inherit;
   top: 0;
-  padding-left: 2.5rem;
+  padding-left: 2rem;
   overflow-x: hidden;
   transition: 0.5s;
   font-weight: bold;
   padding: 1rem 1rem 3rem 1rem;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #ffffff;
   transition: 0.3s;
 }
@@ -136,10 +139,10 @@ nav {
   background-size: 15px 15px;
   border-radius: 0px 10px 0px 10px;
   text-align: center;
-  width: 350px;
+  width: 250px;
   border:none;
-  font-size: 1.2rem;
-  height: 38px;
+  font-size: 1rem;
+  height: 28px;
   right: 0;
   padding-right:0;
   margin-left:5rem;
@@ -174,23 +177,31 @@ input:focus {
   background-color: rgb(19, 3, 32);
   height: 100%;
   width: 0%;
+  margin-left: -16.5px;
   position: fixed;
   z-index: 1;
   top: 0;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 160px;
   justify-content: space-between;
 }
 
 .sidenav a {
   font-weight: bold;
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 62px;
   text-decoration: none;
   font-size: 1.5rem;
   color: #818181;
   display: block;
   transition: 0.3s;
+}
+.avatar img{
+  margin-top:-385px;
+  position:absolute;
+  left:35px;
+  width: 80px;
+  height: 80px;
 }
 .menu {
   display: block;
