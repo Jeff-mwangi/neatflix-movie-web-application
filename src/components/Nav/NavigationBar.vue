@@ -57,7 +57,23 @@ export default {
         .then((data) => {
         this.movies = data.results;
         console.log(this.movies);
-      });
+
+      this.$router.push({
+      name:'Overview',
+      params:this.movies.id,
+      query: {
+        id: this.movies.id,
+        title: this.movies.title,
+        backdrop_path: this.movies.poster_path,
+        overview: this.movies.overview,
+        release_date: this.movies.release_date,
+        vote_average: this.movies.vote_average,
+        vote_count: this.movies.vote_count,
+        popularity: this.movies.popularity,
+      }
+
+       });
+       });
     }
   },
 },
