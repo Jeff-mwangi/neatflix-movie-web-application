@@ -59,9 +59,13 @@ import VLazyImage from "v-lazy-image";
 import'../components/movies/Popular.vue'
 export default {
     name: "Overview",
-  props: ['movies'],
   components: {
     VLazyImage,
+  },
+  data() {
+    return {
+      movies: {},
+    };
   },
   }
 </script>

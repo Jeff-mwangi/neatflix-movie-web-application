@@ -5,8 +5,8 @@
         <img
           src="../../assets/neatflix.svg"
           alt="The Movie DB"
-          width="100"
-          height="30"
+          width="120"
+          height="40"
         />
       </a>
 <div id="mySidenav" class="sidenav">
@@ -25,9 +25,6 @@
   v-model ="query"
   @keypress="searchMovie"
   >
-  <span class="avatar">
-  <img src="../../assets/imgs/avat.jpg" style="border-radius:50%;margin-left: 25px;cursor:pointer;" alt="" width="35" height="35" srcset="">
-  </span>
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776;</span>
@@ -60,27 +57,29 @@ export default {
         .then((data) => {
         this.movies = data.results;
         console.log(this.movies);
-
-      this.$router.push({
+        this.movies.forEach(movie => {
+        this.$router.push({
       name:'Overview',
-      params:this.movies.id,
-      query: {
-        id: this.movies.id,
-        title: this.movies.title,
-        backdrop_path: this.movies.poster_path,
-        overview: this.movies.overview,
-        release_date: this.movies.release_date,
-        vote_average: this.movies.vote_average,
-        vote_count: this.movies.vote_count,
-        popularity: this.movies.popularity,
-      }
-
+      params: movie,
+      query: { 
+        id: movie.id,
+        title: movie.title,
+        backdrop_path: movie.backdrop_path,
+        overview: movie.overview,
+        release_date: movie.release_date,
+        vote_average: movie.vote_average,
+        vote_count: movie.vote_count,
+        popularity: movie.popularity,
+      },
+       })
+        })
        });
-       });
+          
+        }
     }
-  },
-},
-};
+  }
+}
+
 </script>
 
 <style scoped>
@@ -94,7 +93,7 @@ nav {
   position: absolute;
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 8%;
   background-color: rgba(32, 5, 54, 0.726);
   padding-top: 2px;
 }
@@ -106,13 +105,13 @@ nav {
 .sidenav a{
   position: inherit;
   top: 0;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   overflow-x: hidden;
   transition: 0.5s;
   font-weight: bold;
   padding: 1rem 1rem 3rem 1rem;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #ffffff;
   transition: 0.3s;
 }
@@ -139,10 +138,10 @@ nav {
   background-size: 15px 15px;
   border-radius: 0px 10px 0px 10px;
   text-align: center;
-  width: 250px;
+  width: 350px;
   border:none;
-  font-size: 1rem;
-  height: 28px;
+  font-size: 1.2rem;
+  height: 38px;
   right: 0;
   padding-right:0;
   margin-left:5rem;
@@ -177,31 +176,23 @@ input:focus {
   background-color: rgb(19, 3, 32);
   height: 100%;
   width: 0%;
-  margin-left: -16.5px;
   position: fixed;
   z-index: 1;
   top: 0;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 160px;
+  padding-top: 60px;
   justify-content: space-between;
 }
 
 .sidenav a {
   font-weight: bold;
-  padding: 8px 8px 8px 62px;
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 1.5rem;
   color: #818181;
   display: block;
   transition: 0.3s;
-}
-.avatar img{
-  margin-top:-385px;
-  position:absolute;
-  left:35px;
-  width: 80px;
-  height: 80px;
 }
 .menu {
   display: block;
