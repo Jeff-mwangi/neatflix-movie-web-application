@@ -25,6 +25,13 @@
   v-model ="query"
   @keypress="searchMovie"
   >
+  <span class="avatar"><img src="https://pbs.twimg.com/media/DmBraqkXcAA1Yco.jpg" alt="" style="border-radius:50%; margin-left:3.5rem" width="40" height="40"> <strong>Geust</strong></span>
+  <!-- <ul class="slide">
+    <li><a href="#">Lorem Ipsum</a></li> 
+    <li><a href="#">Lorem Ipsum</a></li>
+    <li><a href="#">Lorem Ipsum</a></li>
+    <li><a href="#">Lorem Ipsum</a></li>
+  </ul> -->
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776;</span>
@@ -145,6 +152,7 @@ nav {
   right: 0;
   padding-right:0;
   margin-left:5rem;
+  transition:0.4s;
 }
 .sidenav input:active {
   border:none;
@@ -162,6 +170,24 @@ input:focus {
 ::placeholder{
  color:#000000;
 }
+.avatar{
+  cursor: pointer;
+
+}
+/* .slide {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+}
+
+.slide li {padding : 30px;}
+
+.search {position: absolute; opacity: 0; height: 0px;}    
+
+.search .slide {height: 300px;}  */
 
 @media screen and (max-height: 770px) {
   .sidenav {
