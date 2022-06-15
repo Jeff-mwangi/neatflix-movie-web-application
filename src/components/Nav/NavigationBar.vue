@@ -28,11 +28,14 @@
   <span class="dropdown">
   <span class="avatar"><img src="https://pbs.twimg.com/media/DmBraqkXcAA1Yco.jpg" alt="" style="border-radius:50%; margin-left:3.5rem" width="40" height="40"> <b>Geust</b></span>
   <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-    </span>
+    <ul>
+      <li>
+    <a href="#">Profile</a>
+    <a href="#">Logout</a>
+    </li>
+    </ul>
+  </div>
+  </span>
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776;</span>
@@ -175,9 +178,36 @@ input:focus {
   cursor: pointer;
 
 }
-.dropdown{
-  
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: rgba(12, 2, 20, 0.726);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a{
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 @media screen and (max-height: 770px) {
   .sidenav {
     padding-top: 15px;
