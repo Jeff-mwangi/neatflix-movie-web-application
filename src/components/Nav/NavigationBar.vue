@@ -25,13 +25,14 @@
   v-model ="query"
   @keypress="searchMovie"
   >
-  <span class="avatar"><img src="https://pbs.twimg.com/media/DmBraqkXcAA1Yco.jpg" alt="" style="border-radius:50%; margin-left:3.5rem" width="40" height="40"> <strong>Geust</strong></span>
-  <ul class="slide">
-    <li><a href="#">Profile Setting</a></li> 
-    <li><a href="#">Login</a></li>
-    <li><a href="#">Sign Up</a></li>
-    <li><a href="#">Update Details</a></li>
-  </ul>
+  <span class="dropdown">
+  <span class="avatar"><img src="https://pbs.twimg.com/media/DmBraqkXcAA1Yco.jpg" alt="" style="border-radius:50%; margin-left:3.5rem" width="40" height="40"> <b>Geust</b></span>
+  <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+    </span>
   </div>
 </div>
 <span class="menu" @click="openNav()">&#9776;</span>
@@ -174,21 +175,9 @@ input:focus {
   cursor: pointer;
 
 }
-.slide {
-  clear:both;
-  width:100%;
-  height:0px;
-  overflow: hidden;
-  text-align: center;
-  transition: height .4s ease;
+.dropdown{
+  
 }
-
-.slide li {padding : 30px;}
-
-.search {position: absolute; opacity: 0; height: 0px;}    
-
-.search .slide {height: 300px;} 
-
 @media screen and (max-height: 770px) {
   .sidenav {
     padding-top: 15px;
