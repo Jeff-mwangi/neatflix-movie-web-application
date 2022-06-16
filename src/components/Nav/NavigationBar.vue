@@ -26,8 +26,8 @@
   @keypress="searchMovie"
   >
   <span class="dropdown">
-  <span class="avatar"><img src="https://pbs.twimg.com/media/DmBraqkXcAA1Yco.jpg" alt="" style="border-radius:50%; margin-left:3.5rem" width="40" height="40"> <b>Geust</b></span>
-  <div class="dropdown-content">
+  <span @click="display"  class="avatar"><img src="https://pbs.twimg.com/media/DmBraqkXcAA1Yco.jpg" alt="" style="border-radius:50%; margin-left:3.5rem" width="40" height="40"> <b>Geust</b></span>
+  <div id="dropdown-content" class="dropdown-content">
     <ul>
       <li>
     <a href="#">Profile</a>
@@ -87,6 +87,9 @@ export default {
        });
           
         }
+    },
+    display(){
+      document.getElementById("dropdown-content").classList.toggle("show");
     }
   }
 }
@@ -168,7 +171,7 @@ input:focus {
   outline: none;
   border-radius: 10px 0px 10px 0px;
   background-color:#ebebeb;
-  transition: active;
+  transition: 0.4s;
   box-shadow: 0px 0px 10px rgb(247, 247, 247);
 }
 ::placeholder{
@@ -190,8 +193,8 @@ ul{
 .dropdown-content{
   display: none;
   position: absolute;
-  background-color: rgba(12, 2, 20, 0.726);
-  min-width: 160px;
+  background-color:rgb(19, 3, 32);
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -201,13 +204,9 @@ ul{
   text-decoration: none;
   display: block;
 }
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-.dropdown:hover .dropdown-content {
+.show{
   display: block;
 }
-
 @media screen and (max-height: 770px) {
   .sidenav {
     padding-top: 15px;
