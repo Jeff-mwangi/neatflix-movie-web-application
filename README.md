@@ -9,12 +9,24 @@ Clone the repo using:
 ```bash
 git clone https://github.com/Jeff-mwangi/neatflix.git
 ```
+First, navigate to the project folder using:
 
-To run the application on your machine, use the following command:
+```bash
+cd neatflix
+```
+
+Secondly, run the following command to install the required dependancies:
+
+```bash
+yarn
+```
+
+Finally run the application on your machine, use the following command:
 
 ```bash
 yarn dev
 ```
+
 ## Recommended IDE Setup
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
