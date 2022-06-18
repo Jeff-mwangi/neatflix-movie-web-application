@@ -26,7 +26,13 @@
   @keypress="searchMovie"
   >
   <span class="login">
-    <button class="btn btn-danger" type="submit">Login</button>
+    <button
+    class="btn btn-danger" 
+    type="submit"
+    @click="login"
+    >
+    Login
+    </button>
   </span>
   </div>
 </div>
@@ -79,6 +85,13 @@ export default {
        });
           
         }
+    },
+    login(){
+      console.log("I was Clicked")
+      // this.$router.push({
+      // name:'../login/Login',
+      // params: login,
+      // })
     },
     display(){
       document.getElementById("dropdown-content").classList.toggle("show");
@@ -192,6 +205,7 @@ input:focus {
 @media screen and (max-width: 977px) {
 .sidenav {
   background-color: rgb(19, 3, 32);
+  margin-left: -18px;
   height: 100%;
   width: 0%;
   position: fixed;
