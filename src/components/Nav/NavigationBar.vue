@@ -25,16 +25,8 @@
   v-model ="query"
   @keypress="searchMovie"
   >
-  <span class="dropdown">
-  <span @click="display"  class="avatar"><img src="https://pbs.twimg.com/media/DmBraqkXcAA1Yco.jpg" alt="" style="border-radius:50%; margin-left:3.5rem" width="40" height="40"> <b>Geust</b></span>
-  <div id="dropdown-content" class="dropdown-content">
-    <ul>
-      <li>
-    <a href="#">Profile</a>
-    <a href="#">Logout</a>
-    </li>
-    </ul>
-  </div>
+  <span class="login">
+    <button class="btn btn-danger" type="submit">Login</button>
   </span>
   </div>
 </div>
@@ -126,12 +118,12 @@ nav {
   padding: 1rem 1rem 3rem 1rem;
   text-decoration: none;
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #afafaf;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f52e2e;
+  color: #ffffff;
 }
 .closebtn{
   display: none;
@@ -177,35 +169,17 @@ input:focus {
 ::placeholder{
  color:#000000;
 }
-.avatar{
+.login{
+  margin-left: 2rem;
+}
+.login button{
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   cursor: pointer;
-
-}
-ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.dropdown{
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content{
-  display: none;
-  position: absolute;
-  background-color:rgb(19, 3, 32);
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a{
-  color: rgb(255, 255, 255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.show{
-  display: block;
+  transition: 0.4s;
 }
 @media screen and (max-height: 770px) {
   .sidenav {
