@@ -29,7 +29,7 @@
     <button
     class="btn btn-danger" 
     type="submit"
-    @click="login"
+    @click="login()"
     >
     Login
     </button>
@@ -87,11 +87,10 @@ export default {
         }
     },
     login(){
-      console.log("I was Clicked")
-      // this.$router.push({
-      // name:'../login/Login',
-      // params: login,
-      // })
+      this.$router.push({
+        name:'Login',
+      })
+
     },
     display(){
       document.getElementById("dropdown-content").classList.toggle("show");
