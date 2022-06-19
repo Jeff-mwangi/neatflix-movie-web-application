@@ -4,8 +4,9 @@
 	<div class="container__form container--signup">
 		<form action="#" class="form" id="form1">
 			<h2 class="form__title">Sign Up</h2>
-			<input type="text" placeholder="User" class="input" />
+			<input type="text" placeholder="Username" class="input" />
 			<input type="email" placeholder="Email" class="input" />
+			<input type="number" placeholder="Phone" class="input" />
 			<input type="password" placeholder="Password" class="input" />
 			<button class="btn">Sign Up</button>
 		</form>
@@ -85,8 +86,8 @@ secondForm.addEventListener("submit", (e) => e.preventDefault());
 	--button-radius: 0.7rem;
 
 	/* SIZES */
-	--max-width: 758px;
-	--max-height: 420px;
+	--max-width: 920px;
+	--max-height: 520px;
 
 	font-size: 16px;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -107,9 +108,10 @@ body {
 }
 
 .form__title {
-	font-weight: 300;
+	font-weight: 400;
 	margin: 0;
 	margin-bottom: 1.25rem;
+	color:#333;
 }
 
 .link {
@@ -268,6 +270,7 @@ body {
 .input {
 	background-color: #fff;
 	border: none;
+	border-radius:10px;
 	padding: 0.9rem 0.9rem;
 	margin: 0.5rem 0;
 	width: 100%;
