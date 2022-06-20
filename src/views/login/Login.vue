@@ -39,9 +39,12 @@
 
 <script>
 export default {
-    setup() {
-        
-    },
+	name:"Login",
+	data(){
+		return{
+			
+		}
+		},
     methods: {
         login(){
             const signInBtn = document.getElementById("signIn");
